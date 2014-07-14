@@ -4,6 +4,7 @@
 </div>
 
 <div class="center">
+  <%= link_to 'New Listing', new_listing_path, class: "btn btn-primary" %><br><br>
   <div class="row">
   <% @listings.each do |listing| %>
     <div class="col-md-3">
@@ -21,5 +22,8 @@
 
 <br>
 
-<%= link_to 'New Listing', new_listing_path, class: "@btn btn-link" %>
+<%= link_to 'New Listing', new_listing_path, class: "btn btn-primary" %>
+
+<br>
+<br>
 </div>
