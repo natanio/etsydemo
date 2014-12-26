@@ -1,4 +1,12 @@
+$navbar-margin-bottom: 0px;
+$navbar-border-radius: 0px;
+$navbar-default-bg: #3D1C85;
+$navbar-default-link-hover-color: #fcfcfc;
+$navbar-default-link-hover-bg: #281357;
+$navbar-default-brand-color: rgb(225, 211, 255);
+
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Cantarell:400,700italic);
 
 body {
   background-color: #F5F5F1;
@@ -7,13 +15,12 @@ body {
 }
 
 .navbar-default {
-  background-color: #EFEFEB;
+  padding: 0 2em;
 }
 
 .navbar-default .navbar-brand {
-  font-family: guardian-egyptt, georgia, serif;
-  font-weight: 400;
-  color: #d5641c;
+  font-family: 'Cantarell', sans-serif;
+  font-weight: 700;
   font-size: 30px;
 }
 
@@ -21,7 +28,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: bold;
-  color: #0192B5;
+  color: #fcfcfc;
 }
 
 .center {
@@ -55,10 +62,17 @@ body {
   }
 }
 
+.hero {
+  min-height: 450px;
+  background: url("https://dl.dropboxusercontent.com/s/ugncmrliv7id0dc/jumbotron2.jpg")no-repeat left top;  border-bottom: 1px solid rgb(60, 27, 132);
+  margin-bottom: 4em;
+}
+
 .jumbotron {
-  background-image: url('https://dl.dropboxusercontent.com/s/d3j40j9yc5md2ah/jumbotron.jpg');
+  background: none;
   h1, h2 {
-    font-family: guardian-egyptt, georgia, serif;
-    color: white;
+    font-family: 'Cantarell', sans-serif;
+    color: rgb(27, 5, 77);
+    font-weight: 700;
     }
 }
