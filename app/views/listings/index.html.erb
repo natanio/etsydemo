@@ -25,8 +25,9 @@
       </button>
       <ul class="dropdown-menu" role="menu">
         <li><%= link_to "Newest", listings_path(:newest => "true") %></li>
-        <li><a href="#">Manga</a></li>
-        <li><a href="#">Anime</a></li>
+        <li><%= link_to "Manga", listings_path(:manga => "true") %></li>
+        <li><%= link_to "Anime", listings_path(:anime => "true") %></li>
+        <li><%= link_to "Memorabilia", listings_path(:memorabilia => "true") %></li>
       </ul>
     </div>
   </div>

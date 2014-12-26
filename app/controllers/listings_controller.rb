@@ -13,6 +13,15 @@ class ListingsController < ApplicationController
     @listings = Listing.all.order("created_at DESC")
 
     if params[:newest].present? then @listings end
+    if params[:manga].present? 
+      @listings = Listing.where(manga:true).order("created_at DESC")
+    end
+    if params[:anime].present? 
+      @listings = Listing.where(anime:true).order("created_at DESC")
+    end
+    if params[:memorabilia].present? 
+      @listings = Listing.where(memorabilia:true).order("created_at DESC")
+    end
   end
 
   # GET /listings/1
@@ -78,7 +87,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:name, :description, :price, :image)
+      params.require(:listing).permit(:name, :description, :price, :image, :anime, :manga, :memorabilia)
     end
 
     def check_user

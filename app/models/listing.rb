@@ -9,6 +9,7 @@ if Rails.env.development?
   end
 
   # scopes
+  #scope :manga => where(manga: true)
 
   validates :name, :description, :price, presence: true
   validates :price, numericality: { greater_than: 0 }

@@ -28,6 +28,17 @@
     <%= f.label :price %><br>
     <%= f.text_field :price, class: "form-control" %>
   </div>
+
+  <div class="panel panel-default">
+    <h4>Choose all types that apply to the items you are selling:</h4>
+      <%= f.check_box :manga, id: "checkbox1" %>
+      <%= label_tag(:manga, "manga") %>
+      <%= f.check_box :anime, id: "checkbox2" %>
+      <%= label_tag(:anime, "anime") %>
+      <%= f.check_box :memorabilia, id: "checkbox3" %>
+      <%= label_tag(:memorabilia, "memorabilia") %>
+  </div>
+
   <div class="form-group">
     <%= f.label :image %><br>
     <%= f.file_field :image, class: "form-control" %>
