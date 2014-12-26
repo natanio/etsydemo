@@ -1,13 +1,18 @@
 <% unless user_signed_in? %>
   <div class="hero">
     <div class="jumbotron center">
-      <h1>Buy and Sell Manga or Anime</h1>
-      <h2>from one otaku to another</h2>
+      <h1>An Otaku Marketplace</h1>
+      <h2>buy and sell manga, anime, and memorobilia</h2>
+      <div class="panel-register">
+        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg btn-block" %>
+        <%= link_to "Sign In", new_user_session_path, class: "btn btn-default btn-lg btn-block" %>
+      </div>
     </div>
   </div>
 <% end %>
 
 <div class="container center">
+  <h2>Search for Items</h2>
   <div class="col-lg-6 add-padding">
     <div class="input-group pull-left">
       <input type="text" class="form-control" placeholder="Search for...">
