@@ -1,12 +1,36 @@
-<div class="hero">
-  <div class="jumbotron center">
-    <h1>Buy and Sell Manga or Anime</h1>
-    <h2>from one otaku to another</h2>
+<% unless user_signed_in? %>
+  <div class="hero">
+    <div class="jumbotron center">
+      <h1>Buy and Sell Manga or Anime</h1>
+      <h2>from one otaku to another</h2>
+    </div>
   </div>
-</div>
+<% end %>
 
-<div class="center">
-  <%= link_to 'New Listing', new_listing_path, class: "btn btn-primary", data: { no_turbolink: true } %><br><br>
+<div class="container center">
+  <div class="col-lg-6 add-padding">
+    <div class="input-group pull-left">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+
+  <!-- Single button -->
+  <div class="col-lg-6 add-padding">
+    <div class="btn-group pull-right">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        Sort by <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Newest</a></li>
+        <li><a href="#">Manga</a></li>
+        <li><a href="#">Anime</a></li>
+      </ul>
+    </div>
+  </div>
+
   <div class="row">
   <% @listings.each do |listing| %>
     <div class="col-md-3">
@@ -24,7 +48,7 @@
 
 <br>
 
-<%= link_to 'New Listing', new_listing_path, class: "btn btn-primary", data: { no_turbolink: true } %>
+<%= link_to 'New Listing', new_listing_path, class: "btn btn-success", data: { no_turbolink: true } %>
 
 <br>
 <br>
