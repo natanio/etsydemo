@@ -11,6 +11,8 @@ class ListingsController < ApplicationController
   # GET /listings.json
   def index
     @listings = Listing.all.order("created_at DESC")
+
+    if params[:newest].present? then @listings end
   end
 
   # GET /listings/1

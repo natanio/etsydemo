@@ -24,7 +24,7 @@
         Sort by <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu">
-        <li><a href="#">Newest</a></li>
+        <li><%= link_to "Newest", listings_path(:newest => "true") %></li>
         <li><a href="#">Manga</a></li>
         <li><a href="#">Anime</a></li>
       </ul>
